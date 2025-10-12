@@ -6,7 +6,7 @@ export default function Header() {
     <div className="relative">
       {/* 🔹 Top background image */}
       <div
-        className="h-24 bg-cover bg-center"
+        className="h-30 bg-cover bg-center"
         style={{ backgroundImage: "url('/soft.jpg')" }}
       ></div>
 

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const tabs = ['Works', 'Designs', 'Resume', 'Certificates'];
+const tabs = ['Works', 'Resume', 'Certificates'];
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState('Works');
@@ -38,22 +38,68 @@ export default function Tabs() {
             className="absolute w-full"
           >
             {activeTab === 'Works' && (
-              <div className="space-y-5">
+              <div className="space-y-5 grid grid-cols-1 md:grid-cols-2 md:gap-6">
                 <img
-                  src="/ham1.PNG"
+                  src="/desktopUI.PNG"
                   alt="Project Screenshot"
-                  className="rounded-lg shadow-md w-full max-w-md mx-auto"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
                 <img
-                  src="/profile1.PNG"
+                  src="/desktopUI2.PNG"
                   alt="Project Screenshot"
-                  className="rounded-lg shadow-md w-full max-w-md mx-auto"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
+                <img
+                  src="/desktopUI3.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+                <img
+                  src="/desktopUI4.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+                <img
+                  src="/UI1.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+                <img
+                  src="/UI 2.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+                <img
+                  src="/UI03.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+
               </div>
+              
             )}
 
             {activeTab === 'Designs' && (
-              <p className="text-white">Your design content goes here...</p>
+              <>
+                <p className="text-white"></p>
+                <div className="space-y-5 grid grid-cols-1 md:grid-cols-2 md:gap-6">
+                  <img
+                    src="/UI1.PNG"
+                    alt="Project Screenshot"
+                    className="rounded-lg shadow-md w-full max-w-md mx-auto"
+                  />
+                  <img
+                    src="/UI 2.PNG"
+                    alt="Project Screenshot"
+                    className="rounded-lg shadow-md w-full max-w-md mx-auto"
+                  />
+                  <img
+                    src="/UI3.PNG"
+                    alt="Project Screenshot"
+                    className="rounded-lg shadow-md w-full max-w-md mx-auto"
+                  />
+                </div>
+              </>
             )}
 
             {activeTab === 'Resume' && (
@@ -70,12 +116,8 @@ export default function Tabs() {
               </div>
             )}
 
-
             {activeTab === 'Certificates' && (
-              <p className="text-white">Certificate list or previews go here...</p>
-            )}{activeTab === 'Certificates' && (
               <div className="text-white space-y-4">
-                <h2 className="text-lg font-semibold">My Certificates</h2>l
                 <ul className="list-disc list-inside space-y-2">
                   <li>
                     <a
@@ -100,7 +142,6 @@ export default function Tabs() {
                 </ul>
               </div>
             )}
-            
           </motion.div>
         </AnimatePresence>
       </div>
