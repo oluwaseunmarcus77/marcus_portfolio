@@ -8,7 +8,7 @@ import { div } from 'framer-motion/client'
 
 export default function Home() {
   return (
-    <main className="min-h-[500vh] bg-black text-white font-sans">
+    <main className="min-h-[520vh] bg-black text-white font-sans">
       <Header />
       <div className="max-w-4xl mx-auto px-4 py-6">
         <Bio />

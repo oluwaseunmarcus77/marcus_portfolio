@@ -45,7 +45,7 @@ export default function Tabs() {
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
                 <img
-                  src="/desktopUI2.PNG"
+                  src="/desktopUI4.PNG"
                   alt="Project Screenshot"
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
@@ -55,7 +55,7 @@ export default function Tabs() {
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
                 <img
-                  src="/desktopUI4.PNG"
+                  src="/desktopUI2.PNG"
                   alt="Project Screenshot"
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
