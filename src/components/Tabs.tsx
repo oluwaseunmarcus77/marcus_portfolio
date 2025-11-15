@@ -37,20 +37,11 @@ export default function Tabs() {
             transition={{ duration: 0.3 }}
             className="absolute w-full"
           >
+            {/* Works Tab */}
             {activeTab === 'Works' && (
               <div className="space-y-5 grid grid-cols-1 md:grid-cols-2 md:gap-6">
                 <img
                   src="/desktopUI.PNG"
-                  alt="Project Screenshot"
-                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
-                />
-                <img
-                  src="/desktopUI4.PNG"
-                  alt="Project Screenshot"
-                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
-                />
-                <img
-                  src="/desktopUI3.PNG"
                   alt="Project Screenshot"
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
@@ -60,48 +51,34 @@ export default function Tabs() {
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
                 <img
+                  src="/desktopUI3.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+                <img
+                  src="/desktopUI4.PNG"
+                  alt="Project Screenshot"
+                  className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
+                />
+                <img
                   src="/UI1.PNG"
                   alt="Project Screenshot"
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
                 <img
-                  src="/UI 2.PNG"
+                  src="/UI2.PNG"
                   alt="Project Screenshot"
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
                 <img
-                  src="/UI03.PNG"
+                  src="/UI3.PNG"
                   alt="Project Screenshot"
                   className="rounded-lg shadow-md w-full max-w-md mx-auto transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:shadow-white/20 active:scale-95 cursor-pointer"
                 />
-
               </div>
-              
             )}
 
-            {activeTab === 'Designs' && (
-              <>
-                <p className="text-white"></p>
-                <div className="space-y-5 grid grid-cols-1 md:grid-cols-2 md:gap-6">
-                  <img
-                    src="/UI1.PNG"
-                    alt="Project Screenshot"
-                    className="rounded-lg shadow-md w-full max-w-md mx-auto"
-                  />
-                  <img
-                    src="/UI 2.PNG"
-                    alt="Project Screenshot"
-                    className="rounded-lg shadow-md w-full max-w-md mx-auto"
-                  />
-                  <img
-                    src="public/UI3.PNG" // starts from public/
-                    alt="Project Screenshot"
-                    className="rounded-lg shadow-md w-full max-w-md mx-auto"
-                  />
-                </div>
-              </>
-            )}
-
+            {/* Resume Tab */}
             {activeTab === 'Resume' && (
               <div className="text-white space-y-2">
                 <p>You can view or download my resume below:</p>
@@ -116,6 +93,7 @@ export default function Tabs() {
               </div>
             )}
 
+            {/* Certificates Tab */}
             {activeTab === 'Certificates' && (
               <div className="text-white space-y-4">
                 <ul className="list-disc list-inside space-y-2">
