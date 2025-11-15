@@ -94,7 +94,7 @@ export default function Tabs() {
                     className="rounded-lg shadow-md w-full max-w-md mx-auto"
                   />
                   <img
-                    src="/UI3.PNG"
+                    src="public/UI3.PNG" // starts from public/
                     alt="Project Screenshot"
                     className="rounded-lg shadow-md w-full max-w-md mx-auto"
                   />
