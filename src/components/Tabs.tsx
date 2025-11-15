@@ -1,16 +1,17 @@
 "use client";
+
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image"; // Optional: better performance
+import Image from "next/image";
 
-const tabs = ['Works', 'Resume', 'Certificates'];
+const tabs = ["Works", "Resume", "Certificates"] as const;
 
 export default function Tabs() {
-  const [activeTab, setActiveTab] = useState('Works');
+  const [activeTab, setActiveTab] = useState<typeof tabs[number]>("Works");
 
   return (
     <div className="mt-6">
-      {/* Tab Buttons */}
+      {/* ---------- Tab Buttons ---------- */}
       <div className="flex gap-6 border-b border-gray-700">
         {tabs.map((tab) => (
           <button
@@ -18,8 +19,8 @@ export default function Tabs() {
             onClick={() => setActiveTab(tab)}
             className={`py-2 font-semibold transition-all duration-200 hover:text-white ${
               activeTab === tab
-                ? 'text-white border-b-2 border-white'
-                : 'text-gray-400'
+                ? "text-white border-b-2 border-white"
+                : "text-gray-400"
             }`}
           >
             {tab}
@@ -27,7 +28,7 @@ export default function Tabs() {
         ))}
       </div>
 
-      {/* Tab Content with Slide Animation */}
+      {/* ---------- Tab Content ---------- */}
       <div className="mt-6 relative min-h-[200px]">
         <AnimatePresence mode="wait">
           <motion.div
@@ -38,8 +39,8 @@ export default function Tabs() {
             transition={{ duration: 0.3 }}
             className="absolute w-full"
           >
-            {/* === WORKS TAB === */}
-            {activeTab === 'Works' && (
+            {/* ==== WORKS ==== */}
+            {activeTab === "Works" && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   { src: "/desktop-ui.png", alt: "Desktop UI 1" },
@@ -52,23 +53,25 @@ export default function Tabs() {
                 ].map((img, i) => (
                   <div
                     key={i}
-                    className="group relative overflow-hidden rounded-lg shadow-md mx-auto max-w-md"
+                    className="group relative overflow-hidden rounded-lg shadow-md max-w-md mx-auto"
                   >
-                    {/* Using next/image for optimization */}
                     <Image
                       src={img.src}
                       alt={img.alt}
                       width={600}
                       height={400}
-                      className="w-full h-auto object-cover transition-all duration-300 ease-in-out group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-white/20 group-active:scale-95 cursor-pointer"
+                      className="w-full h-auto object-cover transition-all duration-300 ease-in-out
+                                 group-hover:scale-105 group-hover:shadow-lg group-hover:shadow-white/20
+                                 group-active:scale-95 cursor-pointer"
+                      priority={i < 2} // optional: load first two faster
                     />
                   </div>
                 ))}
               </div>
             )}
 
-            {/* === RESUME TAB === */}
-            {activeTab === 'Resume' && (
+            {/* ==== RESUME ==== */}
+            {activeTab === "Resume" && (
               <div className="text-white space-y-4">
                 <p>You can view or download my resume below:</p>
                 <a
@@ -82,8 +85,8 @@ export default function Tabs() {
               </div>
             )}
 
-            {/* === CERTIFICATES TAB === */}
-            {activeTab === 'Certificates' && (
+            {/* ==== CERTIFICATES ==== */}
+            {activeTab === "Certificates" && (
               <div className="text-white space-y-6">
                 <h3 className="text-xl font-bold">My Certifications</h3>
                 <ul className="space-y-4">
